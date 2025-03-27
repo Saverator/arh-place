@@ -1,16 +1,18 @@
 :root {
-  --blue: #0048CE;
-  --dark-blue: #7D8CB4;
-  --light-blue: #F1F4FD;
-  --mid-blue: #d9e4f8;
-  --cornflower: #799EE5;
-  --white: #FFFFFF;
-  --dark: #111111;
+  --black: #222222;
+  --background: #22222294;
+  --white: #ffffff;
+  --gray-dark: #969696;
+  --gray-light: #f0f4f7;
+  --gray-light-2: #eeeeee;
+  --red: #ed6b5b;
+  --font-size-default: 18px;
 }
 
-$font-family: "Golos Text", sans-serif;
-$second-family: "Merriweather", sans-serif;
-$font-size: 1rem;
+$font-family: "Inter", sans-serif;
+$second-family: "Mulish", sans-serif;
+$third-family: "Exo 2", sans-serif;
+$font-size-default: var(--font-size-default);
 
 $brekepoints: (
   xs: 0,
