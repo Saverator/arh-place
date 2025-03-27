@@ -1,0 +1,69 @@
+// Breakepoints start
+
+@mixin xxl-down {
+    @media (max-width: map-get($brekepoints, xxl)) {
+        @content;
+    }
+}
+
+@mixin xxl-up {
+    @media (min-width: map-get($brekepoints, xxl)) {
+        @content;
+    }
+}
+
+@mixin xl-down {
+    @media (max-width: map-get($brekepoints, xl)) {
+        @content;
+    }
+}
+
+@mixin xl-up {
+    @media (min-width: map-get($brekepoints, xl)) {
+        @content;
+    }
+}
+
+@mixin lg-down {
+    @media (max-width: map-get($brekepoints, lg)) {
+        @content;
+    }
+}
+
+@mixin lg-up {
+    @media (min-width: map-get($brekepoints, lg)) {
+        @content;
+    }
+}
+
+@mixin md-down {
+    @media (max-width: map-get($brekepoints, md)) {
+        @content;
+    }
+}
+
+@mixin md-up {
+    @media (min-width: map-get($brekepoints, md)) {
+        @content;
+    }
+}
+
+@mixin sm-down {
+    @media (max-width: map-get($brekepoints, sm)) {
+        @content;
+    }
+}
+
+@mixin sm-up {
+    @media (min-width: map-get($brekepoints, sm)) {
+        @content;
+    }
+}
+
+@mixin xs-up {
+    @media (min-width: map-get($brekepoints, xs)) {
+        @content;
+    }
+}
+
+// Breakepoints end
