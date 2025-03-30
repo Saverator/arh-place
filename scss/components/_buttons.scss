@@ -1,0 +1,111 @@
+.btn {
+    padding: 16px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    line-height: 100%;
+    text-align: center;
+    text-decoration: none;
+
+    &.primary {
+        color: $white;
+        background-color: $black;
+
+        &:hover {
+            color: $gray-light;
+            background: $gray-dark;
+        }
+
+        &:active {
+            color: $black;
+            background: $gray-light-2;
+        }
+    }
+
+    &.secondary {
+        color: $black;
+        border: 2px solid $black;
+        background-color: transparent;
+
+        &:hover {
+            color: $white;
+            background: $gray-dark;
+        }
+
+        &:active {
+            color: $white;
+            background: $black;
+        }
+    }
+
+    &__catalog {
+        font-family: $third-family;
+        font-size: 1.25rem;
+        padding: 13px 26px;
+        margin-right: 40px;
+        overflow: hidden;
+
+        svg {
+            margin-right: 15px;
+
+            rect {
+                transition: all .2s;
+            }
+        }
+
+        &:hover {
+            svg {
+                rect {
+                    fill: $gray-light;
+                    transition: all .2s;
+                }
+            }
+        }
+
+        &:active {
+            svg {
+                rect {
+                    fill: $black;
+                    transition: all .2s;
+                }
+            }
+        }
+
+        @include sm-down {
+            width: 56px;
+            padding: 10px 16px;
+            margin: 0;
+
+            span {
+                display: none;
+            }
+        }
+    }
+
+    &__search {
+        padding: 10px 16px;
+        width: 56px;
+        height: 43px;
+
+        &:hover {
+            svg {
+                path {
+                    stroke: $gray-light;
+                    transition: all .2s;
+                }
+            }
+        }
+
+        &:active {
+            svg {
+                path {
+                    stroke: $black;
+                    transition: all .2s;
+                }
+            }
+        }
+
+        @include sm-up {
+            display: none;
+        }
+    }
+}

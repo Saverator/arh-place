@@ -1,0 +1,37 @@
+.breadcrumbs {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin-bottom: 40px;
+
+    @include lg-down {
+        margin-bottom: 36px;
+    }
+
+    @include sm-down {
+        display: none;
+    }
+
+    &__item {
+        font-size: .875rem;
+        line-height: 100%;
+        color: $gray-dark;
+        text-decoration: none;
+
+        &::after {
+            content: '/';
+            display: inline-block;
+            margin: 0 2px;
+            color: $gray-dark;
+        }
+
+        &:last-child {
+            color: $black;
+
+            &::after {
+                content: '';
+            }
+        }
+    }
+}

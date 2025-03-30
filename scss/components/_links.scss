@@ -1,0 +1,73 @@
+a {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: $black;
+    transition: all .2s;
+
+    &:hover {
+        color: $blue-light;
+        transition: all .2s;
+    }
+
+    &:active {
+        color: $blue;
+        outline: none;
+    }
+
+    &.error {
+        color: $red;
+    }
+}
+
+.account-item {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    text-decoration: none;
+    font-size: .875rem;
+    line-height: 100%;
+
+    &:hover {
+        color:$gray-dark;
+
+        svg {
+            path {
+                stroke: $gray-dark;
+                transition: all .2s;
+            }
+
+            circle {
+                fill: $blue-light;
+                transition: all .2s;
+            }
+        }
+    }
+
+    &:active {
+        color: $gray-dark-2;
+
+        svg {
+            path {
+                stroke: $gray-dark-2;
+                transition: all .2s;
+            }
+
+            circle {
+                fill: $blue;
+                transition: all .2s;
+            }
+        }
+    }
+
+    svg {
+        path {
+            transition: all .2s;
+        }
+
+        circle {
+            transition: all .2s;
+        }
+    }
+}

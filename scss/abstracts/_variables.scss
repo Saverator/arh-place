@@ -3,10 +3,14 @@
   --background: #22222294;
   --white: #ffffff;
   --gray-dark: #969696;
+  --gray-dark-2: #606060;
   --gray-light: #f0f4f7;
   --gray-light-2: #eeeeee;
   --red: #ed6b5b;
-  --font-size-default: 18px;
+  --blue: #196ff6;
+  --blue-light: #8dbaff;
+  --font-size-default: 16px;
+  font-size: var(--font-size-default);
 }
 
 $font-family: "Inter", sans-serif;
@@ -14,11 +18,22 @@ $second-family: "Mulish", sans-serif;
 $third-family: "Exo 2", sans-serif;
 $font-size-default: var(--font-size-default);
 
+$black: var(--black);
+$background: var(--background);
+$white: var(--white);
+$gray-dark: var(--gray-dark);
+$gray-dark-2: var(--gray-dark-2);
+$gray-light: var(--gray-light);
+$gray-light-2: var(--gray-light-2);
+$red: var(--red);
+$blue: var(--blue);
+$blue-light: var(--blue-light);
+
 $brekepoints: (
   xs: 0,
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1200px,
+  xl: 1280px,
   xxl: 1400px
 );

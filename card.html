@@ -7,6 +7,352 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <header class="header">
+        <div class="wrapper header-navigator">
+            <div class="header-logo">
+                <a href="#!">Arh-place</a>
+            </div>
 
+            <nav class="header-menu">
+                <ul>
+                    <li><a href="#!">О сервисе</a></li>
+                    <li><a href="#!">Компании</a></li>
+                    <li><a href="#!">Блог</a></li>
+                    <li><a href="#!">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-location">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 1C6.54182 1.00165 5.14383 1.58165 4.11274 2.61274C3.08165 3.64383 2.50165 5.04182 2.5 6.5C2.5 11.2063 7.5 14.7625 7.7125 14.9125C7.79766 14.9692 7.89769 14.9995 8 14.9995C8.10231 14.9995 8.20234 14.9692 8.2875 14.9125C8.5 14.7625 13.5 11.2063 13.5 6.5C13.4983 5.04182 12.9184 3.64383 11.8873 2.61274C10.8562 1.58165 9.45818 1.00165 8 1ZM8 4.5C8.39556 4.5 8.78224 4.6173 9.11114 4.83706C9.44004 5.05682 9.69638 5.36918 9.84776 5.73463C9.99913 6.10009 10.0387 6.50222 9.96157 6.89018C9.8844 7.27814 9.69392 7.63451 9.41421 7.91421C9.13451 8.19392 8.77814 8.3844 8.39018 8.46157C8.00222 8.53874 7.60009 8.49913 7.23463 8.34776C6.86918 8.19638 6.55682 7.94004 6.33706 7.61114C6.1173 7.28224 6 6.89556 6 6.5C6 5.96957 6.21071 5.46086 6.58579 5.08579C6.96086 4.71071 7.46957 4.5 8 4.5Z" fill="#606060" />
+                </svg>
+
+                <a href="#!">Москва</a>
+            </div>
+        </div>
+
+        <hr class="header-separator">
+
+        <div class="wrapper header-catalog">
+            <a href="#!" class="btn primary btn__catalog">
+                <svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="2" height="2" rx="1" fill="white" />
+                    <rect x="4" width="18" height="2" rx="1" fill="white" />
+                    <rect y="6" width="2" height="2" rx="1" fill="white" />
+                    <rect x="4" y="6" width="14" height="2" rx="1" fill="white" />
+                    <rect y="12" width="2" height="2" rx="1" fill="white" />
+                    <rect x="4" y="12" width="10" height="2" rx="1" fill="white" />
+                </svg>
+                <span>Каталог</span>
+            </a>
+
+            <a href="#!" class="header-catalog__logo">Arh-place</a>
+
+            <a href="#!" class="btn primary btn__search">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.875 19.25C15.2242 19.25 18.75 15.7242 18.75 11.375C18.75 7.02576 15.2242 3.5 10.875 3.5C6.52576 3.5 3 7.02576 3 11.375C3 15.7242 6.52576 19.25 10.875 19.25Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M16.4434 16.9438L20.9996 21.5001" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </a>
+
+            <input type="text" name="catalog-search" id="catalog-search" placeholder="Введите запрос" class="catalog-search">
+
+            <div class="header-account">
+                <a href="#!" class="account-item">
+                    <svg width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24.7177 23.5641L24.7215 23.5706L24.7254 23.5771C24.7342 23.5916 24.7389 23.6081 24.7389 23.625C24.7389 23.6419 24.7342 23.6585 24.7254 23.6729L24.7181 23.6849L24.7113 23.6972C24.7023 23.7134 24.689 23.7269 24.673 23.7362L25.0491 24.385L24.673 23.7362C24.6569 23.7455 24.6386 23.7503 24.6201 23.7501V23.75H24.6116H3.39287V23.75L3.38441 23.7501C3.36585 23.7503 3.34758 23.7455 3.33153 23.7362L2.95538 24.385L3.33152 23.7362C3.31547 23.7269 3.30222 23.7134 3.29318 23.6972L3.28634 23.6849L3.27904 23.6729C3.27027 23.6585 3.26562 23.6419 3.26562 23.625C3.26562 23.6081 3.27027 23.5916 3.27904 23.5771L3.28299 23.5706L3.28681 23.5641C4.82674 20.9113 7.29163 18.9203 10.2089 17.9727L11.7839 17.4612L10.3606 16.6148C9.01921 15.8171 7.97683 14.6011 7.39357 13.1536C6.81031 11.7061 6.71842 10.1072 7.13204 8.60236C7.54565 7.09757 8.44188 5.77019 9.68304 4.82414C10.9242 3.8781 12.4416 3.36572 14.0022 3.36572C15.5628 3.36572 17.0803 3.8781 18.3214 4.82414C19.5626 5.77019 20.4588 7.09757 20.8724 8.60236C21.2861 10.1072 21.1942 11.7061 20.6109 13.1536C20.0276 14.6011 18.9853 15.8171 17.6439 16.6148L16.2206 17.4612L17.7956 17.9727C20.7129 18.9203 23.1777 20.9113 24.7177 23.5641Z" stroke="#222222" stroke-width="1.5" />
+                        <circle cx="25" cy="5" r="5" fill="#196FF6" />
+                    </svg>
+
+                    <p>Профиль</p>
+                </a>
+
+                <a href="#!" class="account-item">
+                    <svg width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.375 23.625L23.625 23.625" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M21.875 23.625L21.875 9.625L16.625 9.625" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M16.625 4.375L16.625 23.625H11.375L11.375 4.375H16.625Z" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M11.375 13.125L6.125 13.125L6.125 23.625" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <circle cx="25" cy="5" r="5" fill="#196FF6" />
+                    </svg>
+
+                    <p>Сравнение</p>
+                </a>
+
+                <a href="#!" class="account-item">
+                    <svg width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 23.625C14 23.625 3.0625 17.5 3.0625 10.0625C3.0625 8.7477 3.51804 7.4735 4.35162 6.4567C5.18519 5.4399 6.34531 4.74331 7.63459 4.48546C8.92387 4.2276 10.2627 4.4244 11.4232 5.04238C12.5837 5.66036 13.4943 6.66134 14 7.87501C14.5057 6.66134 15.4163 5.66036 16.5768 5.04238C17.7373 4.4244 19.0761 4.2276 20.3654 4.48546C21.6547 4.74331 22.8148 5.4399 23.6484 6.4567C24.482 7.4735 24.9375 8.7477 24.9375 10.0625C24.9375 17.5 14 23.625 14 23.625Z" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <circle cx="25" cy="5" r="5" fill="#196FF6" />
+                    </svg>
+
+                    <p>Избранное</p>
+                </a>
+
+                <a href="#!" class="account-item">
+                    <svg width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.75 25.375C9.7165 25.375 10.5 24.5915 10.5 23.625C10.5 22.6585 9.7165 21.875 8.75 21.875C7.7835 21.875 7 22.6585 7 23.625C7 24.5915 7.7835 25.375 8.75 25.375Z" fill="#222222" />
+                        <path d="M20.125 25.375C21.0915 25.375 21.875 24.5915 21.875 23.625C21.875 22.6585 21.0915 21.875 20.125 21.875C19.1585 21.875 18.375 22.6585 18.375 23.625C18.375 24.5915 19.1585 25.375 20.125 25.375Z" fill="#222222" />
+                        <path d="M4.62656 7.875H24.2484L21.3609 17.9812C21.2579 18.348 21.0373 18.6708 20.733 18.9C20.4287 19.1293 20.0575 19.2522 19.6766 19.25H9.19844C8.81747 19.2522 8.44631 19.1293 8.14201 18.9C7.8377 18.6708 7.61709 18.348 7.51406 17.9812L3.55469 4.13438C3.50237 3.95145 3.39185 3.79056 3.23987 3.67609C3.0879 3.56162 2.90276 3.4998 2.7125 3.5H0.875" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <circle cx="25" cy="5" r="5" fill="#196FF6" />
+                      </svg>
+
+                    <p>Корзина</p>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="wrapper breadcrumbs">
+            <a href="#!" class="breadcrumbs__item">Главная</a>
+
+            <a href="#!" class="breadcrumbs__item">Каталог</a>
+
+            <div class="breadcrumbs__item">Деревянный одноэтажный дом</div>
+        </div>
+
+        <section class="wrapper card">
+            <div class="card-slider">
+                <div class="slider-container">
+                    <div class="slides">
+                        <img src="./img/slider-image1.webp" alt="Деревянный одноэтажный дом без крыши с мансардой">
+                        <img src="./img/slider-image2.webp" alt="Деревянный одноэтажный дом без крыши с мансардой">
+                        <img src="./img/slider-image1.webp" alt="Деревянный одноэтажный дом без крыши с мансардой">
+                    </div>
+                </div>
+
+                <div class="slider-pins"></div>
+
+                <div class="slider-arrows">
+                    <div class="slider-arrow slider-arrow_left">
+                        <svg width="16" height="28" viewBox="0 0 16 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.5276 26.5L1.88867 14L14.5276 1.5" stroke="#969696" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+
+                    <div class="slider-arrow slider-arrow_right">
+                        <svg width="16" height="28" viewBox="0 0 16 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.38867 1.5L14.0276 14L1.38867 26.5" stroke="#969696" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-info">
+                <h1 class="card-header">Деревянный одноэтажный дом без крыши с мансардой</h1>
+
+                <div class="card-seller">
+                    <div class="card-seller__name">
+                        Продавец <a href="#!">ООО Ромашка</a>
+                    </div>
+
+                    <div class="card-seller__buttons">
+                        <a href="#!" class="favorite">
+                            <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 20.6251C12 20.6251 1.0625 14.5001 1.0625 7.06263C1.0625 5.74782 1.51804 4.47362 2.35162 3.45682C3.18519 2.44002 4.34531 1.74343 5.63459 1.48558C6.92387 1.22772 8.26266 1.42453 9.4232 2.0425C10.5837 2.66048 11.4943 3.66146 12 4.87513C12.5057 3.66146 13.4163 2.66048 14.5768 2.0425C15.7373 1.42453 17.0761 1.22772 18.3654 1.48558C19.6547 1.74343 20.8148 2.44002 21.6484 3.45682C22.482 4.47362 22.9375 5.74782 22.9375 7.06263C22.9375 14.5001 12 20.6251 12 20.6251Z" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+
+                        <a href="#!" class="chart">
+                            <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21.2632 21.0001L1 21.0001" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M3 7L3 21H8L8 7L3 7Z" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M15 11L15 21H20V11L15 11Z" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M8.36865 1.00009L8.36865 21.0001H14.6844L14.6844 1.00009H8.36865Z" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card-shortinfo">
+                    <div class="card-shortinfo__item">
+                        <p>Стоимость</p>
+                        <p>100 000 ₽</p>
+                    </div>
+
+                    <div class="card-shortinfo__item">
+                        <p>Площадь</p>
+                        <p>79 м²</p>
+                    </div>
+
+                    <div class="card-shortinfo__item">
+                        <p>Архитектурый стиль</p>
+                        <p>Современный</p>
+                    </div>
+
+                    <div class="card-shortinfo__item">
+                        <p>Количество этажей</p>
+                        <p>1</p>
+                    </div>
+
+                    <div class="card-shortinfo__item">
+                        <p>Общая площадь</p>
+                        <p>116 м²</p>
+                    </div>
+
+                    <div class="card-shortinfo__item">
+                        <p>Материал</p>
+                        <p>Дерево</p>
+                    </div>
+                </div>
+
+                <p><b>Особенности</b></p>
+
+                <div class="card-features">
+                    <div class="card-features__item">
+                        Веранда
+                    </div>
+
+                    <div class="card-features__item">
+                        Бассейн
+                    </div>
+
+                    <div class="card-features__item">
+                        Панорамное остекление
+                    </div>
+
+                    <div class="card-features__item">
+                        Навес
+                    </div>
+                </div>
+
+                <div class="card-buttons">
+                    <a href="#!" class="btn primary">Добавить в корзину</a>
+
+                    <a href="#!" class="btn secondary">Задать вопрос о проекте</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="wrapper full-info">
+            <div class="full-info-titles">
+                <a href="#!" class="full-info-titles__title active" data-info-title="properties">
+                    Характеристики
+                </a>
+
+                <a href="#!" class="full-info-titles__title" data-info-title="plans">
+                    Планы помещений
+                </a>
+
+                <a href="#!" class="full-info-titles__title" data-info-title="fasades">
+                    Фасады
+                </a>
+
+                <a href="#!" class="full-info-titles__title" data-info-title="composition">
+                    Состав проекта
+                </a>
+            </div>
+
+            <div class="full-info-content">
+                <div class="card-properties active" data-info-content="properties">
+                    <div class="card-properties__property">
+                        <p>Тип строения</p>
+                        <p>Жилой дом</p>
+                    </div>
+
+                    <div class="card-properties__property">
+                        <p>Число этажей</p>
+                        <p>1</p>
+                    </div>
+
+                    <div class="card-properties__property">
+                        <p>Назначение</p>
+                        <p>Для широких участков</p>
+                    </div>
+
+                    <div class="card-properties__property">
+                        <p>Архитектурный стиль</p>
+                        <p>Английский</p>
+                    </div>
+
+                    <div class="card-properties__property">
+                        <p>Общая площадь</p>
+                        <p>116 м²</p>
+                    </div>
+
+                    <div class="card-properties__property">
+                        <p>Площадь дома</p>
+                        <p>Один этаж с мансардой</p>
+                    </div>
+
+                    <div class="card-properties__property">
+                        <p>Высота дома</p>
+                        <p>116 м²</p>
+                    </div>
+
+                    <div class="card-properties__property">
+                        <p>Мансарда</p>
+                        <p>Да</p>
+                    </div>
+
+                    <div class="card-properties__property">
+                        <p>Цоколь</p>
+                        <p>Да</p>
+                    </div>
+
+                    <div class="card-properties__property">
+                        <p>Форма здания</p>
+                        <p>Квадратная</p>
+                    </div>
+
+                    <div class="card-properties__property">
+                        <p>Количество комнат</p>
+                        <p>4</p>
+                    </div>
+
+                    <div class="card-properties__property">
+                        <p>Количество сан. узлов</p>
+                        <p>2</p>
+                    </div>
+
+                    <div class="card-properties__property">
+                        <p>Тип фундамента</p>
+                        <p>Ленточный монолитный</p>
+                    </div>
+
+                    <div class="card-properties__property">
+                        <p>Материал стен</p>
+                        <p>Дерево</p>
+                    </div>
+
+                    <div class="card-properties__property">
+                        <p>Отделка фасада</p>
+                        <p>Штукатурка</p>
+                    </div>
+
+                    <div class="card-properties__property">
+                        <p>Тип крыши</p>
+                        <p>Чердачная</p>
+                    </div>
+
+                    <div class="card-properties__property">
+                        <p>Угол наклона кровли</p>
+                        <p>20°</p>
+                    </div>
+
+                    <div class="card-properties__property">
+                        <p>Коньковая балка в сторону улицы</p>
+                        <p>Перпендикулярная</p>
+                    </div>
+                </div>
+
+                <div class="card-plans" data-info-content="plans">
+                    <img src="./img/plan.webp" alt="План">
+                    <img src="./img/plan.webp" alt="План">
+                </div>
+
+                <div class="card-fasades" data-info-content="fasades">
+                    Фасады
+                </div>
+
+                <div class="card-composition" data-info-content="composition">
+                    Состав
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="./js/slider.js"></script>
+    <script src="./js/card.js"></script>
 </body>
 </html>

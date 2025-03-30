@@ -1,0 +1,50 @@
+input[type='text'] {
+    border: 1px solid $gray-light-2;
+    border-radius: 8px;
+    padding: 10px 16px;
+    color: $black;
+    line-height: 100%;
+    background: $white;
+    transition: all .2s;
+
+    &:hover {
+        border: 1px solid $gray-dark-2;
+        transition: all .2s;
+    }
+
+    &:focus {
+        outline: none;
+        border: 1px solid $blue;
+        transition: all .2s;
+    }
+
+    &.error {
+        border: 1px solid $red;
+        transition: all .2s;
+    }
+
+    &.catalog-search {
+        max-width: 689px;
+        width: 100%;
+        padding: 10px 56px 10px 16px;
+        margin-right: 36px;
+        border: 2px solid var(--gray-light-2);
+        background: url('../../img/svg/search.svg') no-repeat center right 13px;
+
+        &:hover {
+            border: 2px solid $gray-dark-2;
+            transition: all .2s;
+        }
+
+        &:focus {
+            outline: none;
+            border: 2px solid $blue;
+            transition: all .2s;
+        }
+
+        @include xl-down {
+            max-width: 100%;
+            margin-right: 0;
+        }
+    }
+}

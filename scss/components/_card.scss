@@ -1,0 +1,390 @@
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 160px;
+
+    @include sm-down {
+        margin-bottom: 120px;
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 16px;
+
+        @include xl-down {
+            font-size: 1.875rem;
+        }
+
+        @include sm-down {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.slider-container {
+    position: relative;
+    width: 665px;
+    height: 594px;
+    overflow: hidden;
+    border-radius: 24px;
+    margin: 0 auto;
+
+    @include xl-down {
+        width: 595px;
+        height: 472px;
+    }
+
+    @include sm-down {
+        width: 330px;
+        height: 261px;
+    }
+
+    & > .slides {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.5s ease-in-out;
+
+        img {
+            object-fit: cover;
+            min-width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.slider-arrows {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin-top: 40px;
+
+    @include sm-down {
+        display: none;
+    }
+}
+
+.slider-arrow {
+    position: relative;
+    width: 52px;
+    height: 40px;
+    padding: 8px 3px;
+    cursor: pointer;
+
+    svg {
+        path {
+            transition: all .2s;
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 52%;
+        border-bottom: 2px solid $gray-dark;
+        width: 0;
+        height: 0;
+        transition: all .2s;
+    }
+
+    &:active {
+        svg {
+            path {
+                stroke: $black;
+                transition: all .2s;
+            }
+        }
+
+        &::after {
+            border-bottom: 2px solid $black;
+        }
+    }
+
+    &_left {
+        &::after {
+            left: 5px;
+        }
+
+        &:hover {
+            &::after {
+                width: 40px;
+                transition: all .2s;
+            }
+        }
+    }
+
+    &_right {
+        text-align: right;
+
+        &::after {
+            right: 5px;
+        }
+
+        &:hover {
+            &::after {
+                width: 40px;
+                transition: all .2s;
+            }
+        }
+    }
+}
+
+.slider-pins {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 9px;
+    margin-top: 16px;
+
+    &__pin {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: $gray-light-2;
+        transition: all .2s;
+        cursor: pointer;
+
+        @include sm-up {
+            display: none;
+        }
+
+        &:hover {
+            background-color: $gray-light;
+            transition: all .2s;
+        }
+
+        &:active,
+        &.active {
+            background-color: $black;
+            transition: all .2s;
+        }
+    }
+}
+
+.card-seller {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 16px;
+    margin-bottom: 40px;
+
+    @include xl-down {
+        margin-bottom: 24px;
+    }
+
+    &__name {
+        a {
+            font-size: 1.125rem;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+
+        a {
+            display: flex;
+            width: 40px;
+            height: 40px;
+            text-decoration: none;
+            border-radius: 100%;
+            background-color: $gray-light;
+            backdrop-filter: blur(3px);
+
+            svg {
+                margin: auto;
+
+                path {
+                    fill: transparent;
+                    transition: all .2s;
+                }
+            }
+
+            &:hover {
+                svg {
+                    path {
+                        fill: $gray-dark;
+                        stroke: $black;
+                        transition: all .2s;
+                    }
+                }
+            }
+
+            &.favorite {
+                &:active,
+                .active {
+                    svg {
+                        path {
+                            stroke: none;
+                            fill: $red;
+                        }
+                    }
+                }
+            }
+
+            &.chart {
+                &:active,
+                .active {
+                    svg {
+                        path {
+                            fill: $blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.card-shortinfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 24px;
+    column-gap: 30px;
+    margin-bottom: 24px;
+
+    @include sm-down {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    &__item {
+        p {
+            &:first-child {
+                font-weight: 600;
+                margin-bottom: 8px;
+            }
+        }
+    }
+}
+
+.card-features {
+    margin-top: 16px;
+    margin-bottom: 64px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    @include sm-down {
+        gap: 8px;
+    }
+
+    &__item {
+        font-size: .875rem;
+        line-height: 100%;
+        color: $gray-dark-2;
+        border-radius: 16px;
+        padding: 4px 16px;
+        background: $gray-light-2;
+    }
+}
+
+.card-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+
+    @include sm-down {
+        flex-direction: column;
+    }
+}
+
+.full-info {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+
+    @include xl-down {
+        gap: 40px;
+    }
+}
+
+.full-info-titles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    @include sm-down {
+        width: 100%;
+        overflow-x: scroll;
+        scrollbar-width: none;
+    }
+
+    &__title {
+        font-family: $second-family;
+        font-weight: 800;
+        font-size: 1.5rem;
+        line-height: 100%;
+        color: $gray-dark;
+        text-align: center;
+        text-decoration: none;
+        padding: 16px 0;
+        white-space: nowrap;
+
+        @include sm-down {
+            font-size: 1.25rem;
+            padding: 12px 24px;
+        }
+
+        &.active {
+            color: $black;
+            border-bottom: 1px solid $black;
+        }
+    }
+}
+
+.card-properties {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 465px;
+
+    @include sm-down {
+        height: auto;
+    }
+
+    &__property {
+        width: clamp(100px, 33% - 15px, 433px);
+        margin-right: 30px;
+        margin-bottom: 24px;
+
+        @include sm-down {
+            margin-bottom: 16px;
+        }
+
+        p {
+            &:first-child {
+                font-weight: 600;
+                margin-bottom: 8px;
+            }
+        }
+    }
+}
+
+.card-plans {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    width: 100wv;
+    margin-top: 52px;
+
+    @include sm-down {
+        flex-direction: column;
+        margin-top: 24px;
+    }
+
+    img {
+        width: calc(50% - 20px);
+
+        @include sm-down {
+            width: fit-content;
+        }
+    }
+}
